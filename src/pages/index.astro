@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout>
+  <div class="calculadora-content">
+    <div class="calculadora">
+      <div class="text-calculator"></div>
+      <Button area="a" contenido="C" color="violet" />
+      <Button area="b" contenido="←" color="violet" />
+      <Button area="c" contenido="4" color="violet" />
+      <Button area="d" contenido="x" color="violet" />
+      <Button area="e" contenido="7" color="violet" />
+      <Button area="f" contenido="8" color="violet" />
+      <Button area="g" contenido="9" color="violet" />
+      <Button area="h" contenido="-" color="violet" />
+      <Button area="i" contenido="4" color="violet" />
+      <Button area="j" contenido="5" color="violet" />
+      <Button area="k" contenido="6" color="violet" />
+      <Button area="l" contenido="+" color="violet" />
+      <Button area="m" contenido="1" color="violet" />
+      <Button area="n" contenido="2" color="violet" />
+      <Button area="o" contenido="3" color="violet" />
+      <Button area="p" contenido="=" color="blue" />
+      <Button area="q" contenido="0" color="violet" />
+      <Button area="r" contenido="." color="violet" />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .calculadora-content {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  .calculadora {
+    display: grid;
+    grid-template-areas:
+      "v v v v"
+      "a b c d"
+      "e f g h"
+      "i j k l"
+      "m n o p"
+      "q q r p";
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding: 1.5rem;
+    background-color: #06071c;
+  }
+  .text-calculator {
+	margin-bottom: 1.5rem;
+	height: 5rem;
+    background-color: #171828;
+    grid-area: v;
+    border-radius: 10px;
+  }
+</style>
+
